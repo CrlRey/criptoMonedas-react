@@ -16,7 +16,7 @@ const useSelectMonedas = (label, opciones) => {
         margin-bottom: 10px;
     `
     const Select = styled.select`
-        width: 150%;
+        width: 100%;
         font-size: 18px;
         padding: 6px;
         border-radius: 4px;

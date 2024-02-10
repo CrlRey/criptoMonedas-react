@@ -13,7 +13,7 @@ border-radius: 5px;
     font-family: 'Jost', sans-serif;
     font-weight: 700;
     text-align: center;
-    margin: 20px 400px 0 400px;
+    margin-top: 20px;
     
    
 `

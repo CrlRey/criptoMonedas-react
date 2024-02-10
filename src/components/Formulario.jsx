@@ -1,21 +1,22 @@
 import styled from '@emotion/styled'
 import useSelectMonedas from '../hooks/useSelectMonedas';
+import Resultado from './Resultado';
 import { monedas } from '../data/monedas';
 import { useState, useEffect } from 'react';
 import Error from './Error';
 
 
+
 const FormArea = styled.form`
-      //display: grid;
-      //margin: 0 auto;
-      //width: auto;
-      //grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+  width: 90%;
+  padding-left: 11px;
 `
 const InputSubmit = styled.input`
     display: block;
     background-image: linear-gradient(to right, #55ac98,#234c45);
     border: none;
-    width: 150%;
+    width: 100%;
     padding: 10px;
     color: #d5d9e2;
     font-weight: 700;
@@ -31,13 +32,13 @@ const InputSubmit = styled.input`
     }
 `
 
-const DivForm = styled.div`
+/*const DivForm = styled.div`
   display: grid;
   place-items: center;
  // margin: 0 auto;
   // width: 100%;
   grid-template-columns: repeat(2, 1fr);  
-`
+`*/
 
 const Formulario = ({setMonedas}) => {
 
@@ -91,14 +92,12 @@ const Formulario = ({setMonedas}) => {
 
   return (
 
-    <>
-      <DivForm>   
+    <> 
         <FormArea onSubmit={handleSubmit}>
           <SelectMonedas />
           <SelectCriptomoneda />
           <InputSubmit type="submit" value="cotizar" />
         </FormArea>
-      </DivForm>
       {error && <Error>Todos los campos son obligatorios</Error>}
     </>
   )
